@@ -30,7 +30,7 @@
 	],
 	"scripts": {
 		"dev": "pnpm types:watch & pnpm build:watch",
-		"lint": "eslint --ext .js,.ts,.vue ./"
+		"lint": "eslint --ext .js,.ts,.vue ./ --fix"
 	},
 	"license": "MIT",
 	"peerDependencies": {

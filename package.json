@@ -30,7 +30,9 @@
 	],
 	"scripts": {
 		"dev": "pnpm types:watch & pnpm build:watch",
-		"lint": "eslint --ext .js,.ts,.vue ./ --fix"
+		"lint": "eslint --ext .js,.ts,.vue ./ --fix",
+		"play": "vite playground --open",
+		"play:build": "vite build playground"
 	},
 	"license": "MIT",
 	"peerDependencies": {
@@ -47,6 +49,8 @@
 	},
 	"devDependencies": {
 		"@antfu/eslint-config-ts": "^0.39.5",
-		"vue": "^3.3.4"
+		"vue": "^3.3.4",
+		"vite": "^2.9.12",
+		"vitest": "^0.15.1"
 	}
 }

@@ -1,4 +1,4 @@
-export interface WatermarkProps {
+export interface WatermarkOptions {
   /**
      * The width of the watermark in pixels.
      */

@@ -12,5 +12,5 @@ export const defaultOptions = {
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontFamily: 'sans-serif',
-  }
+  },
 }

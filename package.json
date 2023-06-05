@@ -1,0 +1,51 @@
+{
+	"name": "@watermarkify/vue-watermark",
+	"version": "0.0.0",
+	"private": false,
+	"author": "wingkwong <wingkwong.code@gmail.com>",
+	"description": "Vue Watermark",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/watermarkify/vue-watermark"
+	},
+	"homepage": "https://github.com/watermarkify/vue-watermark",
+	"bugs": {
+		"url": "https://github.com/watermarkify/vue-watermark/issues"
+	},
+	"keywords": [
+		"vue",
+		"watermark",
+		"canvas",
+		"vue3",
+		"composition-api",
+		"vue-watermark",
+		"vuewatermark",
+		"typescript"
+	],
+	"main": "dist/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "pnpm types:watch & pnpm build:watch",
+		"lint": "eslint --ext .js,.ts,.vue ./"
+	},
+	"license": "MIT",
+	"peerDependencies": {
+		"vue": "^3.3.4"
+	},
+	"peerDependenciesMeta": {
+		"@vue/composition-api": {
+			"optional": true
+		}
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org",
+		"access": "public"
+	},
+	"devDependencies": {
+		"vue": "^3.3.4"
+	}
+}

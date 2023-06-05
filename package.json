@@ -46,6 +46,7 @@
 		"access": "public"
 	},
 	"devDependencies": {
+		"@antfu/eslint-config-ts": "^0.39.5",
 		"vue": "^3.3.4"
 	}
 }

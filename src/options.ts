@@ -1,10 +1,10 @@
 export const defaultOptions = {
-  width: 120,
-  height: 50,
+  width: null,
+  height: null,
   content: 'watermark',
   image: null,
-  gap: [20, 10],
-  offset: [5, 5],
+  gap: [20, 20],
+  offset: [0, 0],
   zIndex: 5,
   rotate: -20,
   font: {

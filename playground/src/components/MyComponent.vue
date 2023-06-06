@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { Watermark } from '@watermarkify/vue-watermark'
 
 const watermarkOptions = ref({
-    content: 'Confidential',
+    content: 'watermark',
   },
 )
 </script>
@@ -19,8 +19,9 @@ const watermarkOptions = ref({
 
 <style scoped>
   .content {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 1200px;
     background: green;
+    padding: 20px;
   }
 </style>

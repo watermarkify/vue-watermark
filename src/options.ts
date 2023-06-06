@@ -1,7 +1,7 @@
 export const defaultOptions = {
   width: null,
   height: null,
-  content: 'watermark',
+  content: null,
   image: null,
   gap: [20, 20],
   offset: [0, 0],

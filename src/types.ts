@@ -17,3 +17,10 @@ export interface WatermarkOptions {
   rotate: number // The rotation angle in degree ∈ [-180 .. 180]
   font?: WatermarkFont // The font properties for the watermark text.
 }
+
+export interface WatermarkDrawingParams {
+  drawX: number // The X position where the watermark should be drawn on the canvas.
+  drawY: number // The Y position where the watermark should be drawn on the canvas.
+  rotateX: number // The X position around which the watermark should be rotated.
+  rotateY: number // The Y position around which the watermark should be rotated.
+}

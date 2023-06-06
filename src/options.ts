@@ -6,6 +6,7 @@ export const defaultOptions = {
   gap: [20, 10],
   offset: [5, 5],
   zIndex: 5,
+  rotate: -20,
   font: {
     color: 'rgba(0,0,0,.2)',
     fontSize: 18,

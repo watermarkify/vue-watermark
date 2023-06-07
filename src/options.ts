@@ -4,7 +4,7 @@ export const defaultOptions = {
   content: null,
   image: null,
   gap: [20, 20],
-  offset: [0, 0],
+  offset: [null, null],
   zIndex: 5,
   rotate: -20,
   font: {

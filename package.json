@@ -45,7 +45,7 @@
     "play": "vite playground --open",
     "play:build": "vite build playground",
     "test": "vitest",
-    "release": "bumpp --commit --tag --push"
+    "release": "bumpp --commit --tag --push && pnpm publish"
   },
   "dependencies": {
     "vue": "^3.3.4"

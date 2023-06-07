@@ -51,6 +51,6 @@
 		"@antfu/eslint-config-ts": "^0.39.5",
 		"vue": "^3.3.4",
 		"vite": "^4.0.0",
-		"vitest": "^0.31.0"
+		"vitest": "^0.32.0"
 	}
 }

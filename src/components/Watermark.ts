@@ -97,11 +97,11 @@ export const Watermark = defineComponent({
       })
     }
 
-    const convertStyleToString = (style: object): string => {
+    const convertStyleToString = (style: Record<string, any>): string => {
       // Convert the style object to a string of CSS styles
       // e.g. { z-index: 5; position: absolute; } -> z-index: 5; position: absolute;
       return Object.keys(style)
-        .map(key => `${key.replace(/([A-Z])/g, '-$1').toLowerCase()}: ${style[key]};`)
+        .map((key: string) => `${key.replace(/([A-Z])/g, '-$1').toLowerCase()}: ${style[key]};`)
         .join(' ')
     }
 
@@ -185,7 +185,8 @@ export const Watermark = defineComponent({
       addWatermark(canvas.toDataURL(), watermarkWidth)
     }
 
-    const renderWatermark = (slot) => {
+    // TODO: better type
+    const renderWatermark = (slot: any) => {
       // Create a new canvas element and get its context
       const canvas = document.createElement('canvas')
       const canvasCtx = canvas.getContext('2d')

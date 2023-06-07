@@ -1,67 +1,67 @@
 {
-	"name": "@watermarkify/vue-watermark",
-	"version": "0.0.0",
-	"private": false,
-	"author": "աɨռɢӄաօռɢ <wingkwong.code@gmail.com>",
-	"description": "Vue Watermark",
-	"packageManager": "pnpm@8.6.1",
-	"funding": "https://github.com/sponsors/wingkwong",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/watermarkify/vue-watermark"
-	},
-	"homepage": "https://github.com/watermarkify/vue-watermark#readme",
-	"bugs": {
-		"url": "https://github.com/watermarkify/vue-watermark/issues"
-	},
-	"keywords": [
-		"vue",
-		"watermark",
-		"canvas",
-		"vue3",
-		"composition-api",
-		"vue-watermark",
-		"vuewatermark",
-		"typescript"
-	],
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"require": "./dist/index.js",
-			"import": "./dist/index.mjs"
-		}
-	},
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"dev": "pkgroll --watch",
-		"build": "pkgroll",
-		"lint": "eslint --ext .js,.ts,.vue . --fix",
-		"play": "vite playground --open",
-		"play:build": "vite build playground",
-		"test": "vitest",
-		"release": "bumpp --commit --tag --push && pnpm publish"
-	},
-	"license": "MIT",
-	"dependencies": {
-		"vue": "^3.3.4"
-	},
-	"publishConfig": {
-		"registry": "https://registry.npmjs.org",
-		"access": "public"
-	},
-	"devDependencies": {
-		"@antfu/eslint-config-ts": "^0.39.5",
-		"bumpp": "^9.1.1",
-		"eslint": "^8.42.0",
-		"pkgroll": "^1.3.1",
-		"pnpm": "^8.6.1",
-		"typescript": "^4.7.3",
-		"vite": "^4.0.0",
-		"vitest": "^0.32.0"
-	}
+  "name": "@watermarkify/vue-watermark",
+  "version": "0.0.0",
+  "private": false,
+  "packageManager": "pnpm@8.6.1",
+  "description": "Vue Watermark",
+  "author": "աɨռɢӄաօռɢ <wingkwong.code@gmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/wingkwong",
+  "homepage": "https://github.com/watermarkify/vue-watermark#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watermarkify/vue-watermark"
+  },
+  "bugs": {
+    "url": "https://github.com/watermarkify/vue-watermark/issues"
+  },
+  "keywords": [
+    "vue",
+    "watermark",
+    "canvas",
+    "vue3",
+    "composition-api",
+    "vue-watermark",
+    "vuewatermark",
+    "typescript"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pkgroll --watch",
+    "build": "pkgroll",
+    "lint": "eslint . --fix",
+    "play": "vite playground --open",
+    "play:build": "vite build playground",
+    "test": "vitest",
+    "release": "bumpp --commit --tag --push && pnpm publish"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-ts": "^0.39.5",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.42.0",
+    "pkgroll": "^1.3.1",
+    "pnpm": "^8.6.1",
+    "typescript": "^4.7.3",
+    "vite": "^4.0.0",
+    "vitest": "^0.32.0"
+  }
 }

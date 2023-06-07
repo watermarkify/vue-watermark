@@ -1,27 +1,27 @@
 {
-	"compilerOptions": {
-		"target": "esnext",
-		"module": "esnext",
-		"moduleResolution": "node",
-		"lib": ["esnext", "DOM"],
-		"esModuleInterop": true,
-		"strict": true,
-		"jsx": "preserve",
-		"allowJs": true,
-		"strictNullChecks": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"skipDefaultLibCheck": true,
-		"baseUrl": ".",
-		"paths": {
-			"@watermarkify/vue-watermark": [
-				"./src/*"
-			]
-		}
-	},
-	"exclude": [
-		"dist",
-		"playground",
-		"node_modules"
-	]
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["esnext", "DOM"],
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@watermarkify/vue-watermark": [
+        "./src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "dist",
+    "playground",
+    "node_modules"
+  ]
 }

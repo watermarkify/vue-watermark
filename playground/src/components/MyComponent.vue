@@ -19,9 +19,9 @@ const watermarkOptions = ref({
 
 <style scoped>
   .content {
-    height: 600px;
-    width: 1200px;
-    background: green;
+    height: 160px;
+    width: 800px;
+    background: rgb(98, 215, 244);
     padding: 20px;
   }
 </style>

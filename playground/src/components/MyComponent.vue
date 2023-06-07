@@ -1,11 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { Watermark } from '@watermarkify/vue-watermark'
 
 const watermarkOptions = ref({
-    content: 'watermark',
-  },
-)
+  content: 'watermark'
+})
 </script>
 
 <template>

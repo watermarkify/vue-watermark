@@ -19,28 +19,32 @@ You can install `@watermarkify/vue-watermark` via npm or yarn:
 
 ```bash
 npm install @watermarkify/vue-watermark
-
 # or
-
 yarn add @watermarkify/vue-watermark
+# or 
+pnpm install @watermarkify/vue-watermark
 ```
 
 ## Usage
 
+Retrieved from [playground](./playground/)
+
 ```vue
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
+// step 1: import Watermark from @watermarkify/vue-watermark
 import { Watermark } from '@watermarkify/vue-watermark'
 
+// step 2: define watermark options
 const watermarkOptions = ref({
-    content: 'watermark',
-  },
-)
+  content: 'watermark'
+})
 </script>
 
 <template>
   <div>
     <h1>Watermark Example</h1>
+    <!-- step 3: apply watermark on the target slot  -->
     <Watermark :options="watermarkOptions">
       <div class="content">This is the content of the slot.</div>
     </Watermark>

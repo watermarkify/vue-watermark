@@ -11,5 +11,5 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
-  base: './',
+  base: 'vue-watermark',
 })

@@ -44,6 +44,7 @@
     "lint": "eslint . --fix",
     "play": "vite playground --open",
     "play:build": "vite build playground",
+    "play:release": "npm run play:build && rsync -rvzh ./playground/dist/ ./docs/",
     "test": "vitest",
     "release": "bumpp --commit --tag --push && pnpm publish"
   },

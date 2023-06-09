@@ -1,5 +1,7 @@
 # @watermarkify/vue-watermark
 
+[![NPM version](https://img.shields.io/npm/v/@watermarkify/vue-watermark.svg)](https://www.npmjs.com/package/@watermarkify/vue-watermark) [![License](https://img.shields.io/npm/l/@watermarkify/vue-watermark.svg)](https://github.com/watermarkify/vue-watermark/blob/master/LICENSE) [![Total NPM Download](https://img.shields.io/npm/dt/@watermarkify/vue-watermark.svg)](https://www.npmjs.com/package/@watermarkify/vue-watermark)
+
 `@watermarkify/vue-watermark` is a lightweight and customizable Vue.js component that allows you to easily add watermarks to your web applications. With Vue Watermark, you can overlay images or text on top of images, videos, or any other HTML elements to protect your content or add branding.
 
 <div align="center">

@@ -43,9 +43,10 @@
     "build": "pkgroll",
     "lint": "eslint . --fix",
     "prettier": "prettier --write .",
+    "format": "pnpm lint && pnpm prettier",
     "play": "vite playground --open",
     "play:build": "vite build playground",
-    "play:release": "npm run play:build && rsync -rvzh ./playground/dist/ ./docs/",
+    "play:release": "pnpm run play:build && rsync -rvzh ./playground/dist/ ./docs/",
     "test": "vitest",
     "release": "bumpp --commit --tag --push && pnpm publish"
   },

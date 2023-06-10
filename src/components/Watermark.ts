@@ -22,13 +22,7 @@ export const Watermark = defineComponent({
     const { width, height, content, gap, offset, image, zIndex, font, rotate } = options
 
     // Destructure font props
-    const {
-      color,
-      fontSize,
-      fontWeight,
-      fontStyle,
-      fontFamily,
-    } = font
+    const { color, fontSize, fontWeight, fontStyle, fontFamily } = font
 
     // Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
     const devicePixelRatio = window.devicePixelRatio || 1
@@ -63,10 +57,7 @@ export const Watermark = defineComponent({
         defaultHeight = Number(fontSize) * contents.length + (contents.length - 1) * FontGap
       }
       // Return the dimensions as a tuple
-      return [
-        width ?? defaultWidth,
-        height ?? defaultHeight,
-      ] as const
+      return [width ?? defaultWidth, height ?? defaultHeight] as const
     }
 
     // Draw texts at the specified coordinates,
@@ -227,15 +218,7 @@ export const Watermark = defineComponent({
         }
         else {
           // Draw the text watermark
-          drawText(
-            canvas,
-            canvasCtx,
-            drawWidth,
-            drawHeight,
-            watermarkWidth,
-            drawingParams,
-            alternateDrawingParams,
-          )
+          drawText(canvas, canvasCtx, drawWidth, drawHeight, watermarkWidth, drawingParams, alternateDrawingParams)
         }
       }
       // Return a div element containing the original content and the watermark container
@@ -259,11 +242,7 @@ export const Watermark = defineComponent({
       if (slots.length !== 1)
         throw new Error(`@watermarkify: <Watermark> requires exactly one slot, but got ${slots.length}`)
       // Render the watermark overlay
-      return h(
-        'div',
-        {},
-        renderWatermark(slots[0]),
-      )
+      return h('div', {}, renderWatermark(slots[0]))
     }
   },
 })

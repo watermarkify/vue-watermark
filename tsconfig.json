@@ -14,14 +14,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@watermarkify/vue-watermark": [
-        "./src/*"
-      ]
+      "@watermarkify/vue-watermark": ["./src/*"]
     }
   },
-  "exclude": [
-    "dist",
-    "playground",
-    "node_modules"
-  ]
+  "exclude": ["dist", "playground", "node_modules"]
 }

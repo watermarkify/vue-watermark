@@ -1,4 +1,4 @@
-import { defineComponent, h, onMounted, reactive, ref, shallowRef, toRefs, watch } from 'vue'
+import { defineComponent, h, onMounted, reactive, ref, toRefs, watch } from 'vue'
 import { defaultOptions } from '../options'
 import { BaseSize, FontGap } from '../constants'
 import type { WatermarkDrawingParams, WatermarkOptions } from '../types'
@@ -103,7 +103,7 @@ export const Watermark = defineComponent({
 
     const getWatermarkStyle = () => {
       // Set default styles for the watermark
-      const watermarkStyle = ref({
+      const watermarkStyle = {
         zIndex: zIndex.value,
         position: 'absolute',
         left: '0',
@@ -113,26 +113,26 @@ export const Watermark = defineComponent({
         pointerEvents: 'none',
         backgroundRepeat: 'repeat',
         backgroundPosition: 'unset',
-      })
-      // Calculate the watermark position based on the options
-      const positionLeft = ref(offset.value?.[0] ?? gapXCenter.value - gapXCenter.value)
-      const positionTop = ref(offset.value?.[1] ?? gapYCenter.value - gapYCenter.value)
-      // If the watermark goes beyond the left or top edge of the canvas
-      if (positionLeft.value > 0) {
-        // Adjust the left position and width accordingly
-        watermarkStyle.value.left = `${appendPixel(positionLeft.value)}`
-        watermarkStyle.value.width = `calc(100% - ${appendPixel(positionLeft.value)})`
-        positionLeft.value = 0
       }
-      if (positionTop.value > 0) {
+      // Calculate the watermark position based on the options
+      let positionLeft = offset.value?.[0] ?? gapXCenter.value - gapXCenter.value
+      let positionTop = offset.value?.[1] ?? gapYCenter.value - gapYCenter.value
+      // If the watermark goes beyond the left or top edge of the canvas
+      if (positionLeft > 0) {
+        // Adjust the left position and width accordingly
+        watermarkStyle.left = `${appendPixel(positionLeft)}`
+        watermarkStyle.width = `calc(100% - ${appendPixel(positionLeft)})`
+        positionLeft = 0
+      }
+      if (positionTop > 0) {
         // Adjust the top position and height accordingly
-        watermarkStyle.value.top = `${appendPixel(positionTop.value)}`
-        watermarkStyle.value.height = `calc(100% - ${appendPixel(positionTop.value)})`
-        positionTop.value = 0
+        watermarkStyle.top = `${appendPixel(positionTop)}`
+        watermarkStyle.height = `calc(100% - ${appendPixel(positionTop)})`
+        positionTop = 0
       }
       // Set the background position based on the calculated position
-      watermarkStyle.value.backgroundPosition = `${appendPixel(positionLeft.value)} ${appendPixel(positionTop.value)}`
-      return watermarkStyle.value
+      watermarkStyle.backgroundPosition = `${appendPixel(positionLeft)} ${appendPixel(positionTop)}`
+      return watermarkStyle
     }
 
     const addWatermark = (base64Url: string, watermarkWidth: number) => {
@@ -182,7 +182,6 @@ export const Watermark = defineComponent({
     }
 
     const renderWatermark = () => {
-      console.log('renderWatermark')
       const slot = slots[0]
       // Create a new canvas element and get its context
       const canvas = document.createElement('canvas')
@@ -245,13 +244,17 @@ export const Watermark = defineComponent({
           ...defaultOptions,
           ...props.options,
         })
+        renderWatermark()
       },
       { deep: true, immediate: true },
     )
 
-    return () => {
-      // Render the watermark overlay
-      return h('div', {}, renderWatermark())
+    return {
+      renderWatermark,
     }
+  },
+  render() {
+    // Render the watermark overlay
+    return h('div', {}, this.renderWatermark())
   },
 })

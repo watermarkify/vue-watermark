@@ -39,6 +39,7 @@ const watermarkOptions = ref({
               id="width"
               type="number"
               placeholder="Enter width"
+              v-model="watermarkOptions.width"
             />
           </div>
           <div class="mb-4">
@@ -48,6 +49,7 @@ const watermarkOptions = ref({
               id="height"
               type="number"
               placeholder="Enter height"
+              v-model="watermarkOptions.height"
             />
           </div>
           <div class="mb-4 md:flex md:justify-between">

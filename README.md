@@ -29,29 +29,31 @@ pnpm install @watermarkify/vue-watermark
 
 ## Usage
 
-Retrieved from [playground](./playground/)
+The following code snippet is retrieved from [playground](./playground/). You may also try the interactive playground [here](https://watermarkify.github.io/vue-watermark/).
 
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue'
 // step 1: import Watermark from @watermarkify/vue-watermark
 import { Watermark } from '@watermarkify/vue-watermark'
 
 // step 2: define watermark options
+// see https://github.com/watermarkify/vue-watermark#options
 const watermarkOptions = ref({
-  content: 'watermark'
+  content: 'watermark',
+  gap: [20, 20],
+  offset: [10, 10],
+  zIndex: 5,
+  rotate: -20,
 })
 </script>
+```
 
-<template>
-  <div>
-    <h1>Watermark Example</h1>
-    <!-- step 3: apply watermark on the target slot  -->
-    <Watermark :options="watermarkOptions">
-      <div class="content">This is the content of the slot.</div>
-    </Watermark>
-  </div>
-</template>
+Pass `watermarkOptions` to `options` and define your slot.
+
+```vue
+<Watermark :options="watermarkOptions">
+  <div>This is the content of the slot.</div>
+</Watermark>
 ```
 
 ## Options

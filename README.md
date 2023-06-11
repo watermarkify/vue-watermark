@@ -1,5 +1,7 @@
 # @watermarkify/vue-watermark
 
+[![NPM version](https://img.shields.io/npm/v/@watermarkify/vue-watermark.svg)](https://www.npmjs.com/package/@watermarkify/vue-watermark) [![License](https://img.shields.io/npm/l/@watermarkify/vue-watermark.svg)](https://github.com/watermarkify/vue-watermark/blob/master/LICENSE) [![Total NPM Download](https://img.shields.io/npm/dt/@watermarkify/vue-watermark.svg)](https://www.npmjs.com/package/@watermarkify/vue-watermark)
+
 `@watermarkify/vue-watermark` is a lightweight and customizable Vue.js component that allows you to easily add watermarks to your web applications. With Vue Watermark, you can overlay images or text on top of images, videos, or any other HTML elements to protect your content or add branding.
 
 <div align="center">
@@ -27,29 +29,31 @@ pnpm install @watermarkify/vue-watermark
 
 ## Usage
 
-Retrieved from [playground](./playground/)
+The following code snippet is retrieved from [playground](./playground/). You may also try the interactive playground [here](https://watermarkify.github.io/vue-watermark/).
 
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue'
 // step 1: import Watermark from @watermarkify/vue-watermark
 import { Watermark } from '@watermarkify/vue-watermark'
 
 // step 2: define watermark options
+// see https://github.com/watermarkify/vue-watermark#options
 const watermarkOptions = ref({
-  content: 'watermark'
+  content: 'watermark',
+  gap: [20, 20],
+  offset: [10, 10],
+  zIndex: 5,
+  rotate: -20,
 })
 </script>
+```
 
-<template>
-  <div>
-    <h1>Watermark Example</h1>
-    <!-- step 3: apply watermark on the target slot  -->
-    <Watermark :options="watermarkOptions">
-      <div class="content">This is the content of the slot.</div>
-    </Watermark>
-  </div>
-</template>
+Pass `watermarkOptions` to `options` and define your slot.
+
+```vue
+<Watermark :options="watermarkOptions">
+  <div>This is the content of the slot.</div>
+</Watermark>
 ```
 
 ## Options

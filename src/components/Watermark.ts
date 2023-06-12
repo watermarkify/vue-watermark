@@ -30,7 +30,7 @@ export const Watermark = defineComponent({
     })
 
     // Retrieve the necessary props
-    const { width, height, content, gap, offset, image, zIndex, font, rotate } = toRefs(options)
+    const { width, height, content, gap, offset, image, zIndex, rotate } = toRefs(options)
 
     // Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
     const devicePixelRatio = window.devicePixelRatio || 1

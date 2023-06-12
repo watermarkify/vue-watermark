@@ -23,13 +23,14 @@ export const Watermark = defineComponent({
     const options = reactive({
       ...defaultOptions,
       ...props.options,
+      font: {
+        ...defaultOptions.font,
+        ...props.options?.font,
+      },
     })
 
     // Retrieve the necessary props
     const { width, height, content, gap, offset, image, zIndex, font, rotate } = toRefs(options)
-
-    // Destructure font props
-    const { color, fontSize, fontWeight, fontStyle, fontFamily } = font.value
 
     // Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
     const devicePixelRatio = window.devicePixelRatio || 1
@@ -48,6 +49,8 @@ export const Watermark = defineComponent({
 
     // Calculate watermark size based on content and font properties
     const getWatermarkSize = (canvasCtx: CanvasRenderingContext2D) => {
+      // Destructure font props
+      const { fontSize, fontFamily } = options.font
       // Set default dimensions for the watermark
       let [defaultWidth, defaultHeight] = [120, 64]
       // If no image is provided and canvas text measurement is available
@@ -74,6 +77,9 @@ export const Watermark = defineComponent({
       drawWidth: number,
       drawHeight: number,
     ) => {
+      // Destructure font props
+      const { fontSize, fontFamily, fontStyle, color, fontWeight } = options.font
+      // Set mergedFontSize
       const mergedFontSize = Number(fontSize) * devicePixelRatio
       // Set the font properties for drawing the text
       // For instance props, see below link
@@ -243,6 +249,10 @@ export const Watermark = defineComponent({
         Object.assign(options, {
           ...defaultOptions,
           ...props.options,
+          font: {
+            ...defaultOptions.font,
+            ...props.options?.font,
+          },
         })
         renderWatermark()
       },

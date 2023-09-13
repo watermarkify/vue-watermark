@@ -58,14 +58,14 @@
     "access": "public"
   },
   "devDependencies": {
-    "@antfu/eslint-config-ts": "^0.41.0",
-    "bumpp": "^9.1.1",
-    "eslint": "^8.42.0",
-    "pkgroll": "^1.3.1",
-    "pnpm": "^8.6.1",
-    "prettier": "^2.8.8",
-    "typescript": "^4.7.3",
-    "vite": "^4.0.0",
-    "vitest": "^0.34.0"
+    "@antfu/eslint-config-ts": "^0.41.3",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.49.0",
+    "pkgroll": "^1.11.0",
+    "pnpm": "^8.7.5",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4"
   }
 }

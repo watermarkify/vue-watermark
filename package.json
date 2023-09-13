@@ -28,8 +28,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "main": "./dist/index.js",
@@ -48,7 +48,7 @@
     "play:build": "vite build playground",
     "play:release": "pnpm run play:build && rsync -rvzh ./playground/dist/ ./docs/",
     "test": "vitest",
-    "release": "bumpp --commit --tag --push && pnpm publish"
+    "release": "pnpm build && bumpp --commit --tag --push && pnpm publish"
   },
   "dependencies": {
     "vue": "^3.3.4"

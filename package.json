@@ -58,7 +58,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@antfu/eslint-config-ts": "^0.42.0",
+    "@antfu/eslint-config-ts": "^0.43.0",
     "bumpp": "^9.2.0",
     "eslint": "^8.49.0",
     "pkgroll": "^1.11.0",

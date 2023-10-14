@@ -19,50 +19,53 @@ const watermarkOptions = ref({
 </script>
 
 <template>
-  <div class="flex h-full w-full">
-    <div>
-      <Watermark :options="watermarkOptions">
-        <div class="content">This is the content of the slot.</div>
+  <main class="flex flex-col lg:flex-row flex-1 items-stretch">
+    <section class="flex flex-2 lg:flex-1 bg-watermarkify-500">
+      <Watermark :options="watermarkOptions" class="watermark flex flex-1">
+        <div class="p-4 h-full">This is the content of the slot.</div>
       </Watermark>
-    </div>
-    <div class="w-full h-full">
-      <section class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="content"> Content </label>
+    </section>
+
+    <section class="flex-1 flex items-stretch">
+      <div
+        class="w-full grid lg:grid-flow-col lg:grid-rows-7 grid-cols-2 gap-x-5 lg:gap-x-10 p-5 lg:p-10 shadow-md bg-white text-xs lg:text-base text-gray-700 font-bold"
+      >
+        <div>
+          <label for="content" class="block mb-1 lg:mb-2">Content</label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="content"
             type="text"
             placeholder="Enter watermark content"
             v-model="watermarkOptions.content"
           />
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="width"> Width </label>
+        <div>
+          <label for="width" class="block mb-1 lg:mb-2">Width</label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="width"
             type="number"
             placeholder="Enter width"
             v-model="watermarkOptions.width"
           />
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="height"> Height </label>
+        <div>
+          <label for="height" class="block mb-1 lg:mb-2">Height</label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="height"
             type="number"
             placeholder="Enter height"
             v-model="watermarkOptions.height"
           />
         </div>
-        <div class="mb-4 md:flex md:justify-between">
+        <div class="md:justify-between">
           <div class="mb-4 md:mb-0">
-            <label class="block text-gray-700 font-bold mb-2" for="gap"> [GapX, GapY] </label>
+            <label for="gap" class="block mb-1 lg:mb-2"> [GapX GapY] </label>
             <div class="flex">
               <input
-                class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="gap_x"
                 type="number"
                 placeholder="Enter Gap X"
@@ -70,7 +73,7 @@ const watermarkOptions = ref({
               />
               <span class="mx-2 flex items-center"></span>
               <input
-                class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="gap_y"
                 type="number"
                 placeholder="Enter Gap Y"
@@ -79,12 +82,12 @@ const watermarkOptions = ref({
             </div>
           </div>
         </div>
-        <div class="mb-4">
+        <div>
           <div class="mb-4 md:mb-0">
-            <label class="block text-gray-700 font-bold mb-2" for="offset"> [OffsetX, OffsetY] </label>
+            <label for="offset" class="block mb-1 lg:mb-2"> [OffsetX OffsetY] </label>
             <div class="flex">
               <input
-                class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="offset_x"
                 type="number"
                 placeholder="Enter offset X"
@@ -92,7 +95,7 @@ const watermarkOptions = ref({
               />
               <span class="mx-2 flex items-center"></span>
               <input
-                class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="offset_y"
                 type="number"
                 placeholder="Enter offset Y"
@@ -101,20 +104,20 @@ const watermarkOptions = ref({
             </div>
           </div>
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="zIndex"> zIndex </label>
+        <div>
+          <label for="zIndex" class="block mb-1 lg:mb-2">zIndex</label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="zIndex"
             type="number"
             placeholder="Enter zIndex"
             v-model="watermarkOptions.zIndex"
           />
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="rotate"> rotate </label>
+        <div>
+          <label for="rotate" class="block mb-1 lg:mb-2">rotate</label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="rotate"
             type="number"
             min="-180"
@@ -123,74 +126,66 @@ const watermarkOptions = ref({
             v-model="watermarkOptions.rotate"
           />
         </div>
-      </section>
-    </div>
-    <div class="w-full h-full">
-      <section class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-          <div class="mb-4">
-            <label for="color" class="block text-gray-700 font-bold mb-2">fontColor</label>
-            <input
-              type="text"
-              id="color"
-              name="color"
-              class="w-full border-gray-400 py-2 px-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
-              placeholder="Enter a color value"
-              v-model="watermarkOptions.font.color"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="size" class="block text-gray-700 font-bold mb-2">fontSize</label>
-            <input
-              type="number"
-              id="size"
-              name="size"
-              class="w-full border-gray-400 py-2 px-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
-              placeholder="Enter a font size"
-              v-model="watermarkOptions.font.fontSize"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="weight" class="block text-gray-700 font-bold mb-2">fontWeight</label>
-            <input
-              id="weight"
-              name="weight"
-              class="w-full border-gray-400 py-2 px-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
-              placeholder="Enter a font weight"
-              v-model="watermarkOptions.font.fontWeight"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="style" class="block text-gray-700 font-bold mb-2">fontStyle</label>
-            <input
-              id="style"
-              name="style"
-              class="w-full border-gray-400 py-2 px-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
-              placeholder="Enter a font style"
-              v-model="watermarkOptions.font.fontStyle"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="family" class="block text-gray-700 font-bold mb-2">fontFamily</label>
-            <input
-              id="family"
-              name="family"
-              class="w-full border-gray-400 py-2 px-3 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
-              placeholder="Enter a font family"
-              v-model="watermarkOptions.font.fontFamily"
-            />
-          </div>
+
+        <div>
+          <label for="color" class="block mb-1 lg:mb-2">fontColor</label>
+          <input
+            type="text"
+            id="color"
+            name="color"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+            placeholder="Enter a color value"
+            v-model="watermarkOptions.font.color"
+          />
         </div>
-      </section>
-    </div>
-  </div>
+        <div>
+          <label for="size" class="block mb-1 lg:mb-2">fontSize</label>
+          <input
+            type="number"
+            id="size"
+            name="size"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+            placeholder="Enter a font size"
+            v-model="watermarkOptions.font.fontSize"
+          />
+        </div>
+        <div>
+          <label for="weight" class="block mb-1 lg:mb-2">fontWeight</label>
+          <input
+            id="weight"
+            name="weight"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+            placeholder="Enter a font weight"
+            v-model="watermarkOptions.font.fontWeight"
+          />
+        </div>
+        <div>
+          <label for="style" class="block mb-1 lg:mb-2">fontStyle</label>
+          <input
+            id="style"
+            name="style"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+            placeholder="Enter a font style"
+            v-model="watermarkOptions.font.fontStyle"
+          />
+        </div>
+        <div>
+          <label for="family" class="block mb-1 lg:mb-2">fontFamily</label>
+          <input
+            id="family"
+            name="family"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+            placeholder="Enter a font family"
+            v-model="watermarkOptions.font.fontFamily"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
 
-<style scoped>
-.content {
-  height: 800px;
-  width: 800px;
-  background: rgb(98, 215, 244);
-  padding: 20px;
+<style>
+.watermark > div {
+  flex: 1;
 }
 </style>

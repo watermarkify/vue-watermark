@@ -40,7 +40,7 @@
   ],
   "scripts": {
     "dev": "pkgroll --watch",
-    "build": "pkgroll",
+    "build": "pkgroll --minify",
     "lint": "eslint . --fix",
     "prettier": "prettier --write .",
     "format": "pnpm lint && pnpm prettier",

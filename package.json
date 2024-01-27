@@ -2,7 +2,7 @@
   "name": "@watermarkify/vue-watermark",
   "version": "0.0.5",
   "private": false,
-  "packageManager": "pnpm@8.14.3",
+  "packageManager": "pnpm@8.15.0",
   "description": "Vue Watermark",
   "author": "աɨռɢӄաօռɢ <wingkwong.code@gmail.com>",
   "license": "MIT",

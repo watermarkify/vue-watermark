@@ -15,6 +15,8 @@ const watermarkOptions = ref({
     fontStyle: 'normal',
     fontFamily: 'sans-serif',
   },
+  width: undefined,
+  height: undefined,
 })
 </script>
 

@@ -51,7 +51,7 @@
     "release": "pnpm build && bumpp --commit --tag --push"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.4.18"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",

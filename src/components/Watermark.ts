@@ -39,7 +39,7 @@ export const Watermark = defineComponent({
 
     // Calculate gap and offset values
     const [gapX, gapY] = toRefs(gap.value)
-    const [gapXCenter, gapYCenter] = toRefs([gapX.value / 2, gapY.value / 2])
+    const [gapXCenter, gapYCenter] = [gapX.value / 2, gapY.value / 2]
     // Create ref for watermark container and watermark element
     const watermarkContainerRef = ref<HTMLDivElement>()
     const watermarkRef = ref<HTMLDivElement>()
@@ -123,8 +123,8 @@ export const Watermark = defineComponent({
         backgroundPosition: 'unset',
       }
       // Calculate the watermark position based on the options
-      let positionLeft = offset.value?.[0] ?? gapXCenter.value - gapXCenter.value
-      let positionTop = offset.value?.[1] ?? gapYCenter.value - gapYCenter.value
+      let positionLeft = offset.value?.[0] ?? gapXCenter - gapXCenter
+      let positionTop = offset.value?.[1] ?? gapYCenter - gapYCenter
       // If the watermark goes beyond the left or top edge of the canvas
       if (positionLeft > 0) {
         // Adjust the left position and width accordingly

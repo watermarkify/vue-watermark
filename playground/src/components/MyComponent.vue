@@ -33,7 +33,7 @@ const watermarkOptions = ref({
         class="w-full grid lg:grid-flow-col lg:grid-rows-7 grid-cols-2 gap-x-5 lg:gap-x-10 p-5 lg:p-10 shadow-md bg-white text-xs lg:text-base text-gray-700 font-bold"
       >
         <div>
-          <label for="content" class="block mb-1 lg:mb-2">Content</label>
+          <label for="content" class="block mb-1 lg:mb-2">content</label>
           <input
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="content"
@@ -43,7 +43,7 @@ const watermarkOptions = ref({
           />
         </div>
         <div>
-          <label for="width" class="block mb-1 lg:mb-2">Width</label>
+          <label for="width" class="block mb-1 lg:mb-2">width</label>
           <input
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="width"
@@ -53,7 +53,7 @@ const watermarkOptions = ref({
           />
         </div>
         <div>
-          <label for="height" class="block mb-1 lg:mb-2">Height</label>
+          <label for="height" class="block mb-1 lg:mb-2">height</label>
           <input
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="height"
@@ -64,7 +64,7 @@ const watermarkOptions = ref({
         </div>
         <div class="md:justify-between">
           <div class="mb-4 md:mb-0">
-            <label for="gap" class="block mb-1 lg:mb-2"> [GapX GapY] </label>
+            <label for="gap" class="block mb-1 lg:mb-2"> [gapX, gapY] </label>
             <div class="flex">
               <input
                 class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
@@ -86,7 +86,7 @@ const watermarkOptions = ref({
         </div>
         <div>
           <div class="mb-4 md:mb-0">
-            <label for="offset" class="block mb-1 lg:mb-2"> [OffsetX OffsetY] </label>
+            <label for="offset" class="block mb-1 lg:mb-2"> [offsetX, offsetY] </label>
             <div class="flex">
               <input
                 class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"

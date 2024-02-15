@@ -1,4 +1,4 @@
-import { defineComponent, h, onMounted, reactive, ref, toRefs, watch } from 'vue'
+import { defineComponent, h, onMounted, reactive, ref, toRefs, watch, PropType } from 'vue'
 import { defaultOptions } from '../options'
 import { BaseSize, FontGap } from '../constants'
 import type { WatermarkDrawingParams, WatermarkOptions } from '../types'

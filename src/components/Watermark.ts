@@ -7,8 +7,8 @@ export const Watermark = defineComponent({
   name: 'Watermark',
   props: {
     options: {
-      type: Object as () => WatermarkOptions,
-      default: () => ({}),
+      type: Object as PropType<WatermarkOptions>,
+      default: {},
     },
   },
   setup(props, ctx) {

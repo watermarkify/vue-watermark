@@ -1,8 +1,8 @@
 {
   "name": "@watermarkify/vue-watermark",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.15.3",
   "description": "Vue Watermark",
   "author": "աɨռɢӄաօռɢ <wingkwong.code@gmail.com>",
   "license": "MIT",
@@ -51,7 +51,7 @@
     "release": "pnpm build && bumpp --commit --tag --push"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.4.18"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",

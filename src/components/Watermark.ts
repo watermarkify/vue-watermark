@@ -1,4 +1,5 @@
-import { defineComponent, h, onMounted, reactive, ref, toRefs, watch, PropType } from 'vue'
+import type { PropType } from 'vue'
+import { defineComponent, h, onMounted, reactive, ref, toRefs, watch } from 'vue'
 import { defaultOptions } from '../options'
 import { BaseSize, FontGap } from '../constants'
 import type { WatermarkDrawingParams, WatermarkOptions } from '../types'
@@ -15,11 +16,9 @@ export const Watermark = defineComponent({
     // Get the default slot content
     const slots = ctx.slots.default?.()
     // Throw an error if no slot content is provided
-    if (!slots) 
-      throw new Error('@watermarkify: Slot is required to use <Watermark>')
+    if (!slots) throw new Error('@watermarkify: Slot is required to use <Watermark>')
     // Throw an error if more than one slot content is provided
-    if (slots.length !== 1) 
-      throw new Error(`@watermarkify: <Watermark> requires exactly one slot, but got ${slots.length}`)
+    if (slots.length !== 1) throw new Error(`@watermarkify: <Watermark> requires exactly one slot, but got ${slots.length}`)
 
     // Merge props.options with defaultOptions
     const options = reactive({
@@ -61,7 +60,7 @@ export const Watermark = defineComponent({
         canvasCtx.font = `${Number(fontSize)}px ${fontFamily}`
         const contents = Array.isArray(content.value) ? content.value : [content.value]
         // Measure the width of each content item
-        const widths = contents.map(item => canvasCtx.measureText(item!).width)
+        const widths = contents.map((item) => canvasCtx.measureText(item!).width)
         // Calculate the default width and height based on the measured content
         defaultWidth = Math.ceil(Math.max(...widths))
         defaultHeight = Number(fontSize) * contents.length + (contents.length - 1) * FontGap
@@ -196,8 +195,7 @@ export const Watermark = defineComponent({
       const canvasCtx = canvas.getContext('2d')
       if (canvasCtx) {
         // Create a new div element for the watermark if it doesn't exist yet
-        if (!watermarkRef.value) 
-          watermarkRef.value = document.createElement('div')
+        if (!watermarkRef.value) watermarkRef.value = document.createElement('div')
         // Get the watermark size and canvas dimensions
         const [watermarkWidth, watermarkHeight] = getWatermarkSize(canvasCtx)
         const canvasWidth = (gapX.value + watermarkWidth) * devicePixelRatio
@@ -228,8 +226,7 @@ export const Watermark = defineComponent({
 
         if (image.value) {
           // TODO: handle image watermark
-        }
-        else {
+        } else {
           // Draw the text watermark
           drawText(canvas, canvasCtx, drawWidth, drawHeight, watermarkWidth, drawingParams, alternateDrawingParams)
         }

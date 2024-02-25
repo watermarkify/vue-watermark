@@ -26,7 +26,7 @@ importers:
         version: 2.0.1(typescript@5.2.2)
       pnpm:
         specifier: ^8.7.5
-        version: 8.7.5
+        version: 8.15.4
       prettier:
         specifier: ^3.0.3
         version: 3.2.5
@@ -3029,8 +3029,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm@8.7.5:
-    resolution: {integrity: sha512-WI8WZb89Uiq5x2jdz4PcQMG9ovTnXcDCEpoEckPYIT2zD8/+dEhVozPlT7bu3WkBgE0uTARtgyIKAFt+IpW2cQ==}
+  /pnpm@8.15.4:
+    resolution: {integrity: sha512-C9Opvp6w6aaSZ23uwAowO6IYuiedmSQUdWFrOY267t0RFG+SwoQ0WPVXsdEn4J1MFx4QW9zWthACs5aFqAFrng==}
     engines: {node: '>=16.14'}
     hasBin: true
     dev: true

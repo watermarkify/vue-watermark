@@ -17,7 +17,7 @@ importers:
         version: 0.43.1(eslint@8.57.0)(typescript@5.3.3)
       bumpp:
         specifier: ^9.2.0
-        version: 9.3.0
+        version: 9.3.1
       eslint:
         specifier: ^8.49.0
         version: 8.57.0
@@ -1258,7 +1258,7 @@ packages:
     resolution: {integrity: sha512-u8GUjsfC9r5X1AGYhzb1lX3zZj8wqk6SH1DYex8XUGmZ1M2UpvnUPOFi63XFViduspQ6l2xTX84QtG+lUzhEoQ==}
     dependencies:
       debug: 4.3.4
-      jiti: 1.18.2
+      jiti: 1.21.0
       windicss: 3.5.6
     transitivePeerDependencies:
       - supports-color
@@ -1270,7 +1270,7 @@ packages:
       '@antfu/utils': 0.7.4
       '@windicss/config': 1.9.3
       debug: 4.3.4
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       magic-string: 0.30.7
       micromatch: 4.0.5
       windicss: 3.5.6
@@ -1396,8 +1396,8 @@ packages:
       semver: 7.6.0
     dev: true
 
-  /bumpp@9.3.0:
-    resolution: {integrity: sha512-P46VikoEZadYCqx7mbClKlaJnOyvc+JfRJPRf1YwlOjwqeYmutgFe1w9hvfXe819VhpU0N0TNXtxyVAUlAgaNA==}
+  /bumpp@9.3.1:
+    resolution: {integrity: sha512-GQsf2Kwsvoxu8RL4euMvUwN3baZsIuigCPF+iGNQEa19+62MqYcpzxyjbspJT9qCipecpWKcEy6lC5kVoTs1Kw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -1797,8 +1797,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint@8.57.0):
-    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
+  /eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint@8.57.0):
+    resolution: {integrity: sha512-rXDXR3h7cs7dy9RNpUlQf80nX31XWJEyGq1tRMo+6GsO5VmTe4UTwtmonAD4ZkAsrfMVDA2wlGJ3790Ys+D49Q==}
     engines: {node: '>=4'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -1875,7 +1875,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint@8.57.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint@8.57.0)
       get-tsconfig: 4.7.2
       is-glob: 4.0.3
       minimatch: 3.1.2
@@ -2185,17 +2185,6 @@ packages:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: true
 
-  /fast-glob@3.3.1:
-    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
-    dev: true
-
   /fast-glob@3.3.2:
     resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
     engines: {node: '>=8.6.0'}
@@ -2315,7 +2304,7 @@ packages:
       consola: 3.2.3
       defu: 6.1.4
       node-fetch-native: 1.6.2
-      nypm: 0.3.6
+      nypm: 0.3.8
       ohash: 1.1.3
       pathe: 1.1.2
       tar: 6.2.0
@@ -2531,11 +2520,6 @@ packages:
 
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
-    dev: true
-
-  /jiti@1.18.2:
-    resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
-    hasBin: true
     dev: true
 
   /jiti@1.21.0:
@@ -2829,12 +2813,13 @@ packages:
       path-key: 4.0.0
     dev: true
 
-  /nypm@0.3.6:
-    resolution: {integrity: sha512-2CATJh3pd6CyNfU5VZM7qSwFu0ieyabkEdnogE30Obn1czrmOYiZ8DOZLe1yBdLKWoyD3Mcy2maUs+0MR3yVjQ==}
+  /nypm@0.3.8:
+    resolution: {integrity: sha512-IGWlC6So2xv6V4cIDmoV0SwwWx7zLG086gyqkyumteH2fIgCAM4nDVFB2iDRszDvmdSVW9xb1N+2KjQ6C7d4og==}
     engines: {node: ^14.16.0 || >=16.10.0}
     hasBin: true
     dependencies:
       citty: 0.1.6
+      consola: 3.2.3
       execa: 8.0.1
       pathe: 1.1.2
       ufo: 1.4.0

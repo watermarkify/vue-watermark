@@ -23,7 +23,7 @@ You can install `@watermarkify/vue-watermark` via npm or yarn:
 npm install @watermarkify/vue-watermark
 # or
 yarn add @watermarkify/vue-watermark
-# or 
+# or
 pnpm install @watermarkify/vue-watermark
 ```
 

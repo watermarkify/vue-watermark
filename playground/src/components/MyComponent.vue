@@ -35,31 +35,31 @@ const watermarkOptions = ref({
         <div>
           <label for="content" class="block mb-1 lg:mb-2">content</label>
           <input
-            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="content"
+            v-model="watermarkOptions.content"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="text"
             placeholder="Enter watermark content"
-            v-model="watermarkOptions.content"
           />
         </div>
         <div>
           <label for="width" class="block mb-1 lg:mb-2">width</label>
           <input
-            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="width"
+            v-model="watermarkOptions.width"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="number"
             placeholder="Enter width"
-            v-model="watermarkOptions.width"
           />
         </div>
         <div>
           <label for="height" class="block mb-1 lg:mb-2">height</label>
           <input
-            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="height"
+            v-model="watermarkOptions.height"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="number"
             placeholder="Enter height"
-            v-model="watermarkOptions.height"
           />
         </div>
         <div class="md:justify-between">
@@ -67,19 +67,19 @@ const watermarkOptions = ref({
             <label for="gap" class="block mb-1 lg:mb-2"> [gapX, gapY] </label>
             <div class="flex">
               <input
-                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="gap_x"
+                v-model="watermarkOptions.gap[0]"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter Gap X"
-                v-model="watermarkOptions.gap[0]"
               />
-              <span class="mx-2 flex items-center"></span>
+              <span class="mx-2 flex items-center" />
               <input
-                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="gap_y"
+                v-model="watermarkOptions.gap[1]"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter Gap Y"
-                v-model="watermarkOptions.gap[1]"
               />
             </div>
           </div>
@@ -89,19 +89,19 @@ const watermarkOptions = ref({
             <label for="offset" class="block mb-1 lg:mb-2"> [offsetX, offsetY] </label>
             <div class="flex">
               <input
-                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="offset_x"
+                v-model="watermarkOptions.offset[0]"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter offset X"
-                v-model="watermarkOptions.offset[0]"
               />
-              <span class="mx-2 flex items-center"></span>
+              <span class="mx-2 flex items-center" />
               <input
-                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 id="offset_y"
+                v-model="watermarkOptions.offset[1]"
+                class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter offset Y"
-                v-model="watermarkOptions.offset[1]"
               />
             </div>
           </div>
@@ -109,76 +109,76 @@ const watermarkOptions = ref({
         <div>
           <label for="zIndex" class="block mb-1 lg:mb-2">zIndex</label>
           <input
-            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="zIndex"
+            v-model="watermarkOptions.zIndex"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="number"
             placeholder="Enter zIndex"
-            v-model="watermarkOptions.zIndex"
           />
         </div>
         <div>
           <label for="rotate" class="block mb-1 lg:mb-2">rotate</label>
           <input
-            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             id="rotate"
+            v-model="watermarkOptions.rotate"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="number"
             min="-180"
             max="180"
             placeholder="Enter rotate"
-            v-model="watermarkOptions.rotate"
           />
         </div>
 
         <div>
           <label for="color" class="block mb-1 lg:mb-2">fontColor</label>
           <input
-            type="text"
             id="color"
+            v-model="watermarkOptions.font.color"
+            type="text"
             name="color"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a color value"
-            v-model="watermarkOptions.font.color"
           />
         </div>
         <div>
           <label for="size" class="block mb-1 lg:mb-2">fontSize</label>
           <input
-            type="number"
             id="size"
+            v-model="watermarkOptions.font.fontSize"
+            type="number"
             name="size"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font size"
-            v-model="watermarkOptions.font.fontSize"
           />
         </div>
         <div>
           <label for="weight" class="block mb-1 lg:mb-2">fontWeight</label>
           <input
             id="weight"
+            v-model="watermarkOptions.font.fontWeight"
             name="weight"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font weight"
-            v-model="watermarkOptions.font.fontWeight"
           />
         </div>
         <div>
           <label for="style" class="block mb-1 lg:mb-2">fontStyle</label>
           <input
             id="style"
+            v-model="watermarkOptions.font.fontStyle"
             name="style"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font style"
-            v-model="watermarkOptions.font.fontStyle"
           />
         </div>
         <div>
           <label for="family" class="block mb-1 lg:mb-2">fontFamily</label>
           <input
             id="family"
+            v-model="watermarkOptions.font.fontFamily"
             name="family"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font family"
-            v-model="watermarkOptions.font.fontFamily"
           />
         </div>
       </div>

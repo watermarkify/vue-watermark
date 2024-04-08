@@ -24,9 +24,7 @@ const watermarkOptions = ref({
   <main class="flex flex-col lg:flex-row flex-1 items-stretch">
     <section class="flex flex-2 lg:flex-1 bg-watermarkify-500">
       <Watermark :options="watermarkOptions" class="watermark flex flex-1">
-        <div class="p-4 h-full">
-          This is the content of the slot.
-        </div>
+        <div class="p-4 h-full">This is the content of the slot.</div>
       </Watermark>
     </section>
 
@@ -42,7 +40,7 @@ const watermarkOptions = ref({
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="text"
             placeholder="Enter watermark content"
-          >
+          />
         </div>
         <div>
           <label for="width" class="block mb-1 lg:mb-2">width</label>
@@ -52,7 +50,7 @@ const watermarkOptions = ref({
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="number"
             placeholder="Enter width"
-          >
+          />
         </div>
         <div>
           <label for="height" class="block mb-1 lg:mb-2">height</label>
@@ -62,7 +60,7 @@ const watermarkOptions = ref({
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="number"
             placeholder="Enter height"
-          >
+          />
         </div>
         <div class="md:justify-between">
           <div class="mb-4 md:mb-0">
@@ -74,7 +72,7 @@ const watermarkOptions = ref({
                 class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter Gap X"
-              >
+              />
               <span class="mx-2 flex items-center" />
               <input
                 id="gap_y"
@@ -82,7 +80,7 @@ const watermarkOptions = ref({
                 class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter Gap Y"
-              >
+              />
             </div>
           </div>
         </div>
@@ -96,7 +94,7 @@ const watermarkOptions = ref({
                 class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter offset X"
-              >
+              />
               <span class="mx-2 flex items-center" />
               <input
                 id="offset_y"
@@ -104,7 +102,7 @@ const watermarkOptions = ref({
                 class="shadow appearance-none border w-1/2 py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
                 type="number"
                 placeholder="Enter offset Y"
-              >
+              />
             </div>
           </div>
         </div>
@@ -116,7 +114,7 @@ const watermarkOptions = ref({
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             type="number"
             placeholder="Enter zIndex"
-          >
+          />
         </div>
         <div>
           <label for="rotate" class="block mb-1 lg:mb-2">rotate</label>
@@ -128,7 +126,7 @@ const watermarkOptions = ref({
             min="-180"
             max="180"
             placeholder="Enter rotate"
-          >
+          />
         </div>
 
         <div>
@@ -140,7 +138,7 @@ const watermarkOptions = ref({
             name="color"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a color value"
-          >
+          />
         </div>
         <div>
           <label for="size" class="block mb-1 lg:mb-2">fontSize</label>
@@ -151,7 +149,7 @@ const watermarkOptions = ref({
             name="size"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font size"
-          >
+          />
         </div>
         <div>
           <label for="weight" class="block mb-1 lg:mb-2">fontWeight</label>
@@ -161,7 +159,7 @@ const watermarkOptions = ref({
             name="weight"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font weight"
-          >
+          />
         </div>
         <div>
           <label for="style" class="block mb-1 lg:mb-2">fontStyle</label>
@@ -171,7 +169,7 @@ const watermarkOptions = ref({
             name="style"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font style"
-          >
+          />
         </div>
         <div>
           <label for="family" class="block mb-1 lg:mb-2">fontFamily</label>
@@ -181,7 +179,7 @@ const watermarkOptions = ref({
             name="family"
             class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
             placeholder="Enter a font family"
-          >
+          />
         </div>
       </div>
     </section>

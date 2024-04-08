@@ -4,9 +4,7 @@
   <nav class="bg-blue-500">
     <div class="px-4">
       <div class="flex items-center justify-between h-16">
-        <div class="flex-shrink-0 text-white font-bold">
-          @watermarkify/vue-watermark
-        </div>
+        <div class="flex-shrink-0 text-white font-bold">@watermarkify/vue-watermark</div>
         <div>
           <a
             href="https://github.com/watermarkify/vue-watermark"

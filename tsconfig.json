@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": ["esnext", "DOM"],
     "jsx": "preserve",
+    "lib": ["esnext", "DOM"],
+    "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": ".",
     "paths": {
       "@watermarkify/vue-watermark": ["./src/*"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
-    "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
+    "esModuleInterop": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },

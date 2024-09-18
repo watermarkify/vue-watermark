@@ -26,7 +26,7 @@ importers:
         version: 2.4.2(typescript@5.5.2)
       pnpm:
         specifier: ^9.0.0
-        version: 9.0.0
+        version: 9.0.1
       prettier:
         specifier: ^3.0.3
         version: 3.3.1
@@ -1986,8 +1986,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.0.0:
-    resolution: {integrity: sha512-tBBnB8ciWxdIthWVlTzL6/+XtUrQXQAqo2NfYzucU81mb3zpuLxEcE8foEi5pJtVNxqy2enWZ9Hv4u8VFLzVEw==}
+  pnpm@9.0.1:
+    resolution: {integrity: sha512-+QSxM9aZQVsNmX7j8Fommv+9sCz2sif6A9hUg6jz387QuRYKfUd9wFGrZ6+L5EcFuf3xXyrjO8g7dohlKftLHQ==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -4366,7 +4366,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.0.0: {}
+  pnpm@9.0.1: {}
 
   postcss-selector-parser@6.0.16:
     dependencies:

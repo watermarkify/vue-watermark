@@ -1,8 +1,8 @@
 {
   "name": "@watermarkify/vue-watermark",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.15.0",
   "description": "Vue Watermark",
   "author": "աɨռɢӄաօռɢ <wingkwong.code@gmail.com>",
   "license": "MIT",
@@ -58,14 +58,14 @@
     "access": "public"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.12.2",
+    "@antfu/eslint-config": "^3.0.0",
     "bumpp": "^9.2.0",
     "eslint": "^9.0.0",
     "pkgroll": "^2.0.0",
-    "pnpm": "^8.7.5",
+    "pnpm": "^9.0.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
-    "vitest": "^1.0.0"
+    "vitest": "^2.0.0"
   }
 }

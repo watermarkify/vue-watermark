@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { Watermark } from '@watermarkify/vue-watermark'
+import { ref } from 'vue'
 
 const watermarkOptions = ref({
   content: 'watermark',

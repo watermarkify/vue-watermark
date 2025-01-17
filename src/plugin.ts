@@ -1,7 +1,7 @@
 import type { Plugin } from 'vue'
+import type { WatermarkOptions } from './types'
 import { Watermark } from './components/Watermark'
 import { InjectionOptions } from './constants'
-import type { WatermarkOptions } from './types'
 
 export function WatermarkPlugin(defaultOptions: WatermarkOptions = {}): Plugin {
   return {

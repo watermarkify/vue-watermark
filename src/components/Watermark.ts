@@ -1,8 +1,8 @@
 import type { PropType } from 'vue'
-import { defineComponent, h, reactive, ref, toRefs, watch } from 'vue'
-import { defaultOptions } from '../options'
-import { BaseSize, FontGap } from '../constants'
 import type { WatermarkDrawingParams, WatermarkOptions } from '../types'
+import { defineComponent, h, reactive, ref, toRefs, watch } from 'vue'
+import { BaseSize, FontGap } from '../constants'
+import { defaultOptions } from '../options'
 
 export const Watermark = defineComponent({
   name: 'Watermark',

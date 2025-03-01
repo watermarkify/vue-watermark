@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.0.0",
-    "bumpp": "^9.2.0",
+    "bumpp": "^10.0.0",
     "eslint": "^9.0.0",
     "pkgroll": "^2.0.0",
     "pnpm": "^9.0.0",

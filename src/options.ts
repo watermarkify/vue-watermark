@@ -7,6 +7,7 @@ export const defaultOptions = {
   offset: [null, null],
   zIndex: 5,
   rotate: -20,
+  repeat: true,
   font: {
     color: 'rgba(0,0,0,.2)',
     fontSize: 18,

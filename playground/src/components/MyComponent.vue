@@ -8,6 +8,7 @@ const watermarkOptions = ref({
   offset: [10, 10],
   zIndex: 5,
   rotate: -20,
+  repeat: true,
   font: {
     color: 'rgba(0,0,0,.2)',
     fontSize: 18,
@@ -126,6 +127,15 @@ const watermarkOptions = ref({
             min="-180"
             max="180"
             placeholder="Enter rotate"
+          />
+        </div>
+        <div>
+          <label for="repeat" class="block mb-1 lg:mb-2">repeat</label>
+          <input
+            id="repeat"
+            v-model="watermarkOptions.repeat"
+            type="checkbox"
+            class="h-5 w-5 text-watermarkify-500 focus:ring-watermarkify-500 border-gray-300"
           />
         </div>
 

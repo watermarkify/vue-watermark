@@ -44,6 +44,7 @@ const watermarkOptions = ref({
   offset: [10, 10],
   zIndex: 5,
   rotate: -20,
+  repeat: true,
 })
 </script>
 ```
@@ -67,6 +68,7 @@ Pass `watermarkOptions` to `options` and define your slot.
 | offset   | The offset of the watermark from the top-left corner of the container element in pixels. Can be an array with two values for horizontal and vertical offset, respectively. | [number, number]   | [gap[0]/2, gap[1]/2]                                                                           |
 | zIndex   | The z-index of the watermark relative to other elements on the page.                                                                                                       | number             | 5                                                                                              |
 | rotate   | The rotation angle in degrees of the watermark. Can be a value in the range [-180, 180].                                                                                   | number             | -20                                                                                            |
+| repeat   | Whether to repeat the watermark across the container.                                                                                                                     | boolean            | true                                                                                           |
 | font     | The font properties for the watermark text, including family, size, style, weight, and color.                                                                              | WatermarkFont      | { family: "sans-serif", size: 18, style: "normal", weight: "normal", color: "rgba(0,0,0,.2)" } |
 
 <!-- | image    | The URL or path to the image file to be used as the watermark. If an image is provided, the content property will be ignored.                                              | string             | undefined                                                                                      | -->

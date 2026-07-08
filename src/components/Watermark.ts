@@ -24,7 +24,7 @@ export const Watermark = defineComponent({
     })
 
     // Retrieve the necessary props
-    const { width, height, content, gap, offset, image, zIndex, rotate } = toRefs(options)
+    const { width, height, content, gap, offset, image, zIndex, rotate, repeat } = toRefs(options)
 
     // Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
     const devicePixelRatio = window.devicePixelRatio || 1
@@ -111,7 +111,7 @@ export const Watermark = defineComponent({
         width: '100%',
         height: '100%',
         pointerEvents: 'none',
-        backgroundRepeat: 'repeat',
+        backgroundRepeat: repeat.value ? 'repeat' : 'no-repeat',
         backgroundPosition: 'unset',
       }
       // Calculate the watermark position based on the options
@@ -167,16 +167,18 @@ export const Watermark = defineComponent({
       drawHeight: number,
       watermarkWidth: number,
       drawingParams: WatermarkDrawingParams,
-      alternateDrawingParams: WatermarkDrawingParams,
+      alternateDrawingParams?: WatermarkDrawingParams,
     ) => {
       // Draw the primary text using the provided drawing parameters
       fillTexts(canvasCtx, drawingParams.drawX, drawingParams.drawY, drawWidth, drawHeight)
       // Restore the canvas to its original state
       canvasCtx.restore()
-      // Rotate the canvas using the alternate drawing parameters
-      rotateWatermark(canvasCtx, alternateDrawingParams.rotateX, alternateDrawingParams.rotateY, rotate.value)
-      // Draw the secondary text using the alternate drawing parameters
-      fillTexts(canvasCtx, alternateDrawingParams.drawX, alternateDrawingParams.drawY, drawWidth, drawHeight)
+      if (repeat.value && alternateDrawingParams) {
+        // Rotate the canvas using the alternate drawing parameters
+        rotateWatermark(canvasCtx, alternateDrawingParams.rotateX, alternateDrawingParams.rotateY, rotate.value)
+        // Draw the secondary text using the alternate drawing parameters
+        fillTexts(canvasCtx, alternateDrawingParams.drawX, alternateDrawingParams.drawY, drawWidth, drawHeight)
+      }
       // Add the watermark to the canvas
       addWatermark(canvas.toDataURL(), watermarkWidth)
     }

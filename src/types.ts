@@ -15,6 +15,7 @@ export interface WatermarkOptions {
   offset?: [number, number] // The offset of the watermark from the top-left corner of the container element.
   zIndex?: number // The z-index of the watermark relative to other elements on the page.
   rotate?: number // The rotation angle in degree ∈ [-180 .. 180]
+  repeat?: boolean // Whether to repeat the watermark across the container.
   font?: WatermarkFont // The font properties for the watermark text.
 }
 

@@ -5,6 +5,7 @@ export const defaultOptions = {
   image: null,
   gap: [20, 20],
   offset: [null, null],
+  position: 'top-left',
   zIndex: 5,
   rotate: -20,
   repeat: true,

@@ -24,7 +24,7 @@ export const Watermark = defineComponent({
     })
 
     // Retrieve the necessary props
-    const { width, height, content, gap, offset, image, zIndex, rotate, repeat } = toRefs(options)
+    const { width, height, content, gap, offset, position, image, zIndex, rotate, repeat } = toRefs(options)
 
     // Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
     const devicePixelRatio = window.devicePixelRatio || 1
@@ -101,6 +101,25 @@ export const Watermark = defineComponent({
         .join(' ')
     }
 
+    const getNonRepeatBackgroundPosition = () => {
+      const offsetX = offset.value?.[0] ?? 0
+      const offsetY = offset.value?.[1] ?? 0
+
+      const getXPosition = () => {
+        if (position.value.endsWith('-right')) return `calc(100% - ${appendPixel(offsetX)})`
+        if (position.value.endsWith('-middle') || position.value === 'center') return `calc(50% + ${appendPixel(offsetX)})`
+        return appendPixel(offsetX)
+      }
+
+      const getYPosition = () => {
+        if (position.value.startsWith('bottom-')) return `calc(100% - ${appendPixel(offsetY)})`
+        if (position.value.startsWith('middle-') || position.value === 'center') return `calc(50% + ${appendPixel(offsetY)})`
+        return appendPixel(offsetY)
+      }
+
+      return `${getXPosition()} ${getYPosition()}`
+    }
+
     const getWatermarkStyle = () => {
       // Set default styles for the watermark
       const watermarkStyle = {
@@ -114,6 +133,12 @@ export const Watermark = defineComponent({
         backgroundRepeat: repeat.value ? 'repeat' : 'no-repeat',
         backgroundPosition: 'unset',
       }
+
+      if (!repeat.value) {
+        watermarkStyle.backgroundPosition = getNonRepeatBackgroundPosition()
+        return watermarkStyle
+      }
+
       // Calculate the watermark position based on the options
       let positionLeft = offset.value?.[0] ?? gapXCenter - gapXCenter
       let positionTop = offset.value?.[1] ?? gapYCenter - gapYCenter

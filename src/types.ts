@@ -6,13 +6,25 @@ export interface WatermarkFont {
   fontFamily?: string // Font family of the watermark text
 }
 
+export type WatermarkPosition =
+  | 'top-left'
+  | 'top-middle'
+  | 'top-right'
+  | 'middle-left'
+  | 'center'
+  | 'middle-right'
+  | 'bottom-left'
+  | 'bottom-middle'
+  | 'bottom-right'
+
 export interface WatermarkOptions {
   width?: number // The width of the watermark in pixels.
   height?: number // The height of the watermark in pixels.
   image?: string // The URL or path to the image file to be used as the watermark.
   content?: string | string[] // The text content to be used as the watermark.
   gap?: [number, number] // The gap between each instance of the watermark in pixels.
-  offset?: [number, number] // The offset of the watermark from the top-left corner of the container element.
+  offset?: [number, number] // The offset of the watermark from the selected position.
+  position?: WatermarkPosition // The position of a non-repeating watermark.
   zIndex?: number // The z-index of the watermark relative to other elements on the page.
   rotate?: number // The rotation angle in degree ∈ [-180 .. 180]
   repeat?: boolean // Whether to repeat the watermark across the container.

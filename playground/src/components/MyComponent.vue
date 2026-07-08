@@ -2,12 +2,26 @@
 import { Watermark } from '@watermarkify/vue-watermark'
 import { ref } from 'vue'
 
+const watermarkPositions = [
+  'top-left',
+  'top-middle',
+  'top-right',
+  'middle-left',
+  'center',
+  'middle-right',
+  'bottom-left',
+  'bottom-middle',
+  'bottom-right',
+]
+
 const watermarkOptions = ref({
   content: 'watermark',
   gap: [20, 20],
   offset: [10, 10],
+  position: 'top-left',
   zIndex: 5,
   rotate: -20,
+  repeat: true,
   font: {
     color: 'rgba(0,0,0,.2)',
     fontSize: 18,
@@ -127,6 +141,27 @@ const watermarkOptions = ref({
             max="180"
             placeholder="Enter rotate"
           />
+        </div>
+        <div>
+          <label for="repeat" class="block mb-1 lg:mb-2">repeat</label>
+          <input
+            id="repeat"
+            v-model="watermarkOptions.repeat"
+            type="checkbox"
+            class="h-5 w-5 text-watermarkify-500 focus:ring-watermarkify-500 border-gray-300"
+          />
+        </div>
+        <div>
+          <label for="position" class="block mb-1 lg:mb-2">position</label>
+          <select
+            id="position"
+            v-model="watermarkOptions.position"
+            class="shadow appearance-none border w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+          >
+            <option v-for="watermarkPosition in watermarkPositions" :key="watermarkPosition" :value="watermarkPosition">
+              {{ watermarkPosition }}
+            </option>
+          </select>
         </div>
 
         <div>

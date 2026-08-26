@@ -60,7 +60,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.0.0",
     "bumpp": "^11.1.0",
-    "eslint": "^9.0.0",
+    "eslint": "^10.0.0",
     "pkgroll": "^2.27.1",
     "pnpm": "^11.10.0",
     "prettier": "^3.9.4",

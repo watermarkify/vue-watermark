@@ -26,7 +26,7 @@ importers:
         version: 2.27.1(typescript@6.0.3)(vite@8.1.3(jiti@2.7.0)(yaml@2.9.0))
       pnpm:
         specifier: ^11.10.0
-        version: 11.10.0
+        version: 11.11.0
       prettier:
         specifier: ^3.9.4
         version: 3.9.4
@@ -1449,6 +1449,7 @@ packages:
   eslint@9.39.4:
     resolution: {integrity: sha512-XoMjdBOwe/esVgEvLmNsD3IRHkm7fbKIUGvrleloJXUZgDHig2IPWNniv+GwjyJXzuNqVjlr5+4yVUZjycJwfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2099,8 +2100,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@11.10.0:
-    resolution: {integrity: sha512-C3+LmAYAMZBMAX46QesYehbUDuuCm5XE+MsDaBdh/Eq1PdIZEVubRH9NzhoFohR2RGHn03AzkqnzL5URzoyGyA==}
+  pnpm@11.11.0:
+    resolution: {integrity: sha512-RGP2X9gO2A1pvB1L8WPulPYFxzgPwxi7Wy6+FfjNEtScUaTVnpUbQB52TTtsp1HL9RvFDtcAGmvLSTXmhMNIgg==}
     engines: {node: '>=22.13'}
     hasBin: true
 
@@ -4636,7 +4637,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@11.10.0: {}
+  pnpm@11.11.0: {}
 
   postcss-selector-parser@6.1.4:
     dependencies:

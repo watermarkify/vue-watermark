@@ -1,6 +1,6 @@
 {
   "name": "@watermarkify/vue-watermark",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "packageManager": "pnpm@12.11.2",
   "description": "Vue Watermark",

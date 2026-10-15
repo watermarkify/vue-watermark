@@ -1,5 +1,9 @@
 packages:
   - playground
+overrides:
+  # eslint-plugin-vue 9 requires v6, which has no patched release.
+  eslint-plugin-vue>postcss-selector-parser: ^7.1.6
 allowBuilds:
   esbuild: false
+  pnpm: set this to true or false
   unrs-resolver: false

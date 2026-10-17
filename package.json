@@ -48,6 +48,7 @@
     "play:build": "vite build playground",
     "play:release": "pnpm run play:build && rsync -rvzh ./playground/dist/ ./docs/",
     "test": "vitest",
+    "typecheck": "tsc --noEmit",
     "release": "pnpm build && bumpp --commit --tag --push"
   },
   "dependencies": {

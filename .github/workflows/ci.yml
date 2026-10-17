@@ -39,7 +39,10 @@ jobs:
         run: pnpm exec prettier --check .
 
       - name: Test
-        run: pnpm exec vitest run --passWithNoTests
+        run: pnpm exec vitest run
+
+      - name: Typecheck
+        run: pnpm typecheck
 
       - name: Build package
         run: pnpm build

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48">
+  <g fill="#1e3a8a" opacity="0.45">
+    <path d="M4 12h7l5 18 6-14h6l6 14 5-18h7L36 40h-6l-5-13-6 13h-6z"/>
+    <text x="54" y="32" font-family="sans-serif" font-size="21" font-weight="600">watermarkify</text>
+  </g>
+</svg>

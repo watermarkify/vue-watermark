@@ -3,11 +3,10 @@
     "target": "esnext",
     "jsx": "preserve",
     "lib": ["esnext", "DOM"],
-    "baseUrl": ".",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "paths": {
-      "@watermarkify/vue-watermark": ["./src/*"]
+      "@watermarkify/vue-watermark": ["./src/index.ts"]
     },
     "resolveJsonModule": true,
     "allowJs": true,

@@ -5,8 +5,7 @@ import { InjectionOptions } from './constants'
 
 export function WatermarkPlugin(defaultOptions: WatermarkOptions = {}): Plugin {
   return {
-    // TODO: better type
-    install(app: any) {
+    install(app) {
       app.provide(InjectionOptions, defaultOptions)
       app.component('Watermark', Watermark)
     },

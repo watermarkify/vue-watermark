@@ -61,7 +61,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^9.5.1",
     "bumpp": "^12.3.0",
-    "eslint": "^9.39.5",
+    "eslint": "^10.0.0",
     "pkgroll": "^2.29.0",
     "prettier": "^3.9.10",
     "typescript": "^6.0.3",

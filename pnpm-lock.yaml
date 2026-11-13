@@ -184,7 +184,7 @@ importers:
         version: 9.39.5(jiti@2.7.0)(supports-color@7.2.0)
       pkgroll:
         specifier: ^2.29.0
-        version: 2.29.0(typescript@6.0.3)(vite@8.3.6(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))
+        version: 2.29.1(typescript@6.0.3)(vite@8.3.6(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))
       prettier:
         specifier: ^3.9.10
         version: 3.9.10
@@ -2432,8 +2432,8 @@ packages:
   pkg-types@2.3.1:
     resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==}
 
-  pkgroll@2.29.0:
-    resolution: {integrity: sha512-nTWWA9J9mClHnwzDonKtgpP3iZxWNHo6YH4Jo6BfsRNv54v35GtqNFVG6E+WrsSNLiWu8es6PyjSH/EiBDex1g==}
+  pkgroll@2.29.1:
+    resolution: {integrity: sha512-2zQ1E1tPVxZtQz9wN+uTetJZKwj548xQGyAlWgVkhge31pJBt4R8poDrkWVvuYNkosrjpL8i6op5gBGWJyOEQg==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -5134,7 +5134,7 @@ snapshots:
       exsolve: 1.1.0
       pathe: 2.0.3
 
-  pkgroll@2.29.0(typescript@6.0.3)(vite@8.3.6(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0)):
+  pkgroll@2.29.1(typescript@6.0.3)(vite@8.3.6(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0)):
     dependencies:
       '@rollup/plugin-alias': 6.0.0(rollup@4.64.6)
       '@rollup/plugin-commonjs': 29.0.3(rollup@4.64.6)
